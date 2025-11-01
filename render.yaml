@@ -3,10 +3,11 @@ services:
     name: rice-classifier-app
     env: python
     buildCommand: ./render-build.sh
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    startCommand: gunicorn rice_classifier.app:app --bind 0.0.0.0:$PORT
     plan: free
     branch: main
-   envVars:
-  - key: PYTHON_VERSION
-    value: 3.11
-
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.11.4  # Pin Python version to 3.11
