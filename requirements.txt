@@ -1,3 +1,4 @@
+pip>=25.0
 flask
 flask-cors
 gunicorn
@@ -5,3 +6,4 @@ tensorflow==2.15.0
 keras==3.0.5
 numpy<2
 opencv-python-headless
+
