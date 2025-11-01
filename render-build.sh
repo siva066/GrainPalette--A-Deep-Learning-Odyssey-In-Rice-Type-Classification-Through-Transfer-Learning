@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-
-# Exit on error
 set -o errexit
 
-# Install required system-level packages (especially libGL for OpenCV)
+# Install system dependencies (OpenCV)
 apt-get update && apt-get install -y libgl1-mesa-glx
 
-# Install Python packages
-pip install -r rice-classifier/requirements.txt
+# Install Python dependencies
+pip install --no-cache-dir -r requirements.txt
